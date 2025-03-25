@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors Timetable</title>
+    <style>
+        /* Global Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* Container Styling */
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        th, td {
+            border: 1px solid #0a0000;
+            padding: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        /* Header Cells Styling */
+        th {
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Data Cells Styling */
+        td {
+            background-color: #fffcfc;
+            color: #000000;
+            font-size: 14px;
+        }
+
+        /* Doctor Column Styling */
+        .doctor-column {
+            width: 150px;
+        }
+
+        /* Day Column Styling */
+        .day-column {
+            width: 100px;
+        }
+
+        /* Available and Not Available Styling */
+        .available {
+            color: green;
+            font-weight: bold;
+        }
+
+        .not-available {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Hover Effect for Rows */
+        tr:hover {
+            background-color: #0a0101;
+        }
+
+        /* Animation Effect for Table Rows */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Hover Effect for Cells */
+        td:hover {
+            background-color: #0c0000;
+            cursor: pointer;
+        }
+
+        /* Small Screen Adjustments */
+        @media (max-width: 768px) {
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+
+            .doctor-column, .day-column {
+                width: 120px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Doctors Timetable</h1>
+        <p>Find out when your doctor is available at the Hospital.</p>
+    </header>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="day-column">Day</th>
+                    <th class="doctor-column">Dr. Nitesh G (Cardiologist)</th>
+                    <th class="doctor-column">Dr. Sarah W (Pediatrician)</th>
+                    <th class="doctor-column">Dr. Swayam K (Dermatologist)</th>
+                    <th class="doctor-column">Dr. Anvayi (Orthopedist)</th>
+                    <th class="doctor-column">Dr. Lina A (Endocrinologist)</th>
+                    <th class="doctor-column">Dr. Mohit J (Neurologist)</th>
+                    <th class="doctor-column">Dr. Suresh T (Dentist)</th>
+                    <th class="doctor-column">Dr. Neha K (Urologist)</th>
+                    <th class="doctor-column">Dr. Anvit A (Gynecologist)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-column">Monday</td>
+                    <td class="available">9 AM - 5 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 1 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">1 PM - 5 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 1 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 1 PM</td>
+                </tr>
+                <tr>
+                    <td class="day-column">Tuesday</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 5 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 1 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">1 PM - 5 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 1 PM</td>
+                    <td class="not-available">Not Available</td>
+                </tr>
+                <tr>
+                    <td class="day-column">Wednesday</td>
+                    <td class="available">9 AM - 5 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 1 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">1 PM - 5 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 1 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 1 PM</td>
+                </tr>
+                <tr>
+                    <td class="day-column">Thursday</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 5 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 1 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">1 PM - 5 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 1 PM</td>
+                    <td class="not-available">Not Available</td>
+                </tr>
+                <tr>
+                    <td class="day-column">Friday</td>
+                    <td class="available">9 AM - 5 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 1 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">1 PM - 5 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 1 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 1 PM</td>
+                </tr>
+                <tr>
+                    <td class="day-column">Saturday</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 5 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 1 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">1 PM - 5 PM</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="available">9 AM - 1 PM</td>
+                    <td class="not-available">Not Available</td>
+                </tr>
+                <tr>
+                    <td class="day-column">Sunday</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="not-available">Not Available</td>
+                    <td class="not-available">Not Available</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
